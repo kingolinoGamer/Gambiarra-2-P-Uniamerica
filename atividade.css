@@ -1,0 +1,54 @@
+header{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color:#0dbcd3
+}
+
+.logo{
+    background-color: #0dbcd3;
+    padding: 0;     
+    line-height: 0;
+    border-radius: 10px;  
+}
+
+article{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    max-width: 700px;
+    margin: 0 auto;   
+    
+}
+
+.TextoArtigo{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: #0dbcd3;
+    border-radius: 10px;
+}
+
+.Curiosidades{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    background-color: #0dbcd3;
+    border-radius: 5px;
+}
+
+body{
+    background-color: #ebeeee; 
+}
+
+section{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #0dbcd3;
+    border-radius: 10px;
+}
+
+footer{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    max-width: 700px;
+    margin: 0 auto;   
+    background-color: #0dbcd3;
+    border-radius: 10px;
+}
