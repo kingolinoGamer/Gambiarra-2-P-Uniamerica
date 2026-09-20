@@ -1,0 +1,336 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1e88e5; 
+}
+
+.pesquisa input{
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 2px solid rgb(136, 133, 133);
+}
+
+.corpo{
+    display: flex;
+    gap: 2px;
+    background-color: rgb(248, 48, 12);
+    border: 10px chocolate;
+    border-radius: 10px;
+}
+
+.barraEsquerda{
+    background-color: rgb(219, 24, 17);
+    border: 2px solid rgb(163, 41, 3);
+    width: 300px;
+    height: 900px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 4px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.selecao{
+    background-color: rgb(30, 138, 71);
+    border: 4px solid black;
+    width: 260px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.meioSelecao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meioSelecao img {
+  width: 200px;
+  height: 200px;
+  image-rendering: pixelated;
+}
+
+.linhaSuperior{
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+}
+
+.linhaSuperior p{
+    margin: 0;
+}
+
+.linhaInferior{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 12px;
+}
+
+.linhaInferior p{
+    margin: 0;
+}
+
+.EstiloBotão{
+    width: 40px;
+    height: 40px;
+    background-color: #2b2b2b;
+    border-radius: 5px;
+}
+
+.botões{
+    display: flex;
+    gap: 40px;
+}
+
+.proximo{
+    width: 30px;
+    height: 30px;
+    background-color: #2b2b2b;
+    border-radius: 50px;
+}
+
+.anterior{
+    width: 30px;
+    height: 30px;
+    background-color: #2b2b2b; 
+    border-radius: 50px;
+}
+
+.cabecalhoIcone{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.possivelIcone{
+    background-color: rgb(11, 165, 165);
+    border: 4px solid rgb(11, 172, 150);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.tituloPokedex{
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    align-items: center;
+}
+
+.estatiscas{
+    background-color: #fffdfd;
+    border: 5px rgb(136, 133, 133);
+    border-radius: 5px;
+    height: 150px;
+    text-align: left;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    min-width: 0;
+    margin-top: 8px;
+}
+
+.estatiscas img{
+    width: 100px;
+    height: 100px;
+    image-rendering: pixelated;
+    flex-shrink: 0;
+}
+
+.textoStatus{
+    display: flex;
+    flex-direction: column;
+}
+
+.textoStatus p{
+    margin: 2px 0;
+}
+
+.Alinhamento{
+    display: flex;
+    gap: 10px;
+    width: 98%;
+}
+
+.habilidades{
+    background-color: #ffffff;
+    border: 5px rgb(136, 133, 133);
+    border-radius: 5px;
+    flex: 0.5;
+    height: 50px;
+    text-align: center;
+}
+
+.pesquisa{
+    flex: 1;
+    height: 50px;
+}
+
+.favoritos{
+    background-color: #ffffff;
+    border: 2px solid rgb(136, 133, 133);
+    border-radius: 5px;
+    width: 98%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.botaoFavoritar{
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 2px solid #555;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.botaoFavoritar.ativo{
+    background-color: gold;
+    border-color: #b8860b;
+}
+
+.listaFavoritos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    width: 100%;
+}
+
+.cardFavorito{
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cardFavorito img{
+    width: 40px;
+    height: 40px;
+    image-rendering: pixelated;
+}
+
+.filtrosTipo{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    width: 98%;
+}
+
+.botaoFiltro{
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 2px solid #555;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.botaoFiltro:hover{
+    background-color: #eee;
+}
+
+.botaoFiltro.ativo{
+    background-color: #2b2b2b;
+    color: #fff;
+    border-color: #2b2b2b;
+}
+
+.molduraLista{
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    width: 90%;
+    max-height: 600px; 
+    overflow-y: auto;
+}
+
+.listaPokemons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.cardPokemon{
+    background-color: #fff;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cardPokemon:hover{
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.cardPokemon img{
+    width: 70px;
+    height: 70px;
+    image-rendering: pixelated;
+}
+
+.meioGrid{
+    background-color: rgb(248, 48, 12);
+    border: 2px solid rgb(163, 41, 3);
+    flex: 1;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+    margin-left: 3px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.listaPokemons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mensal2.css">
+    <script src="mensal2.js" defer></script>
+    <title>Pokedex</title>
+</head>
+
+<body>
+    <div class="corpo">
+        <div class="barraEsquerda">
+            <div class="cabecalhoIcone">
+            <div class="possivelIcone"></div>
+            <span class="tituloPokedex"><h2>Minha Pokédex</h2></span>
+            </div>
+            <div class="selecao">
+                <div class="linhaSuperior"></div>
+                <div class="meioSelecao"></div>
+                <div class="linhaInferior"></div>
+            </div>
+
+            <div class="EstiloBotão"></div>
+            <div class="botões">
+                <button class="anterior"></button>
+                <button class="proximo"></button>
+            </div>
+        </div>
+
+        <div class="meioGrid">
+            <div class="info">
+                <div class="estatiscas"></div>
+                <div class="Alinhamento">
+                    <div class="habilidades"></div>
+                    <div class="pesquisa">
+                    <input id="pesquisar" placeholder="Digite o nome do pokemon">
+                    </div>  
+                </div>
+            <div class="favoritos">
+                <button id="botaoFavoritar" class="botaoFavoritar">☆ Favoritar</button>
+                <div class="listaFavoritos"></div>
+            </div>
+            </div>
+            <div class="filtrosTipo">
+                <button class="botaoFiltro" data-tipo="todos">Todos</button>
+                <button class="botaoFiltro" data-tipo="grama">Grama</button>
+                <button class="botaoFiltro" data-tipo="veneno">Veneno</button>
+                <button class="botaoFiltro" data-tipo="fogo">Fogo</button>
+                <button class="botaoFiltro" data-tipo="água">Água</button>
+            </div>
+            <div class="molduraLista">
+                <div class="listaPokemons"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
