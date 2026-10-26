@@ -1,0 +1,59 @@
+<!-- Mudança na estrutura HTML e acessibilidade -->
+<!-- Antes a página usava principalmente divs genéricas e tinha pouca semântica -->
+
+<!-- Agora a estrutura ficou semântica e acessível, com main, aside, section, nav, header e listas reais -->
+<!-- Também foram adicionados atributos ARIA e labels ocultos -->
+
+<main class="corpo">
+    <aside class="barraEsquerda" aria-label="Pokémon selecionado">
+        <header class="cabecalhoIcone">
+            <div class="iconeLed" aria-hidden="true"></div>
+            <h1 class="tituloPokedex">Minha Pokédex</h1>
+        </header>
+
+        <section class="selecao" aria-label="Tela do Pokémon" aria-live="polite">
+            <div class="linhaSuperior"></div>
+            <div class="meioSelecao"></div>
+            <div class="linhaInferior"></div>
+        </section>
+
+        <div class="botaoDirecional" aria-hidden="true"></div>
+
+        <nav class="botoes" aria-label="Navegar entre os Pokémon">
+            <button type="button" class="anterior" aria-label="Pokémon anterior"></button>
+            <button type="button" class="proximo" aria-label="Próximo Pokémon"></button>
+        </nav>
+    </aside>
+
+    <section class="meioGrid" aria-label="Detalhes e lista de Pokémon">
+        <div class="info">
+            <section class="estatisticas" aria-label="Status do Pokémon"></section>
+
+            <div class="linhaBusca">
+                <div class="habilidades"></div>
+                <div class="pesquisa">
+                    <label for="pesquisar" class="visualmenteOculto">
+                        Buscar Pokémon por nome ou número
+                    </label>
+                    <input id="pesquisar" type="search"
+                           placeholder="Digite o nome ou o número"
+                           autocomplete="off">
+                </div>
+            </div>
+
+            <section class="favoritos" aria-label="Favoritos">
+                <button type="button" id="botaoFavoritar"
+                        class="botaoFavoritar" aria-pressed="false">
+                    ☆ Favoritar
+                </button>
+                <ul class="listaFavoritos"></ul>
+            </section>
+        </div>
+
+        <nav class="filtrosTipo" aria-label="Filtrar por tipo"></nav>
+
+        <section class="molduraLista" aria-label="Lista de Pokémon">
+            <ul class="listaPokemons"></ul>
+        </section>
+    </section>
+</main>
