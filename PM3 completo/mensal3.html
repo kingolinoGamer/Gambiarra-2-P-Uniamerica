@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pokédex feita com HTML, CSS e JavaScript usando a PokeAPI.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mensal3.css">
+    <script src="mensal3.js" defer></script>
+    <title>Minha Pokédex</title>
+</head>
+
+<body>
+    <main class="corpo">
+        
+        <aside class="barraEsquerda" aria-label="Pokémon selecionado">
+            <header class="cabecalhoIcone">
+                <div class="iconeLed" aria-hidden="true"></div>
+                <h1 class="tituloPokedex">Minha Pokédex</h1>
+            </header>
+
+            <section class="selecao" aria-label="Tela do Pokémon" aria-live="polite">
+                <div class="linhaSuperior"></div>
+                <div class="meioSelecao"></div>
+                <div class="linhaInferior"></div>
+            </section>
+
+            <div class="botaoDirecional" aria-hidden="true"></div>
+
+            <nav class="botoes" aria-label="Navegar entre os Pokémon">
+                <button type="button" class="anterior" aria-label="Pokémon anterior"></button>
+                <button type="button" class="proximo" aria-label="Próximo Pokémon"></button>
+            </nav>
+        </aside>
+
+        <section class="meioGrid" aria-label="Detalhes e lista de Pokémon">
+            <div class="info">
+                <section class="estatisticas" aria-label="Status do Pokémon"></section>
+
+                <div class="linhaBusca">
+                    <div class="habilidades"></div>
+                    <div class="pesquisa">
+                        <label for="pesquisar" class="visualmenteOculto">Buscar Pokémon por nome ou número</label>
+                        <input id="pesquisar" type="search" placeholder="Digite o nome ou o número" autocomplete="off">
+                    </div>
+                </div>
+
+                <section class="favoritos" aria-label="Favoritos">
+                    <button type="button" id="botaoFavoritar" class="botaoFavoritar" aria-pressed="false">☆ Favoritar</button>
+                    <ul class="listaFavoritos"></ul>
+                </section>
+            </div>
+
+            <nav class="filtrosTipo" aria-label="Filtrar por tipo"></nav>
+
+            <section class="molduraLista" aria-label="Lista de Pokémon">
+                <ul class="listaPokemons"></ul>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

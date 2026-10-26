@@ -1,0 +1,520 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 16px;
+    background: radial-gradient(circle at top, #1b3a63 0%, #0f2342 45%, #0a1628 100%);
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+button {
+    font-family: inherit;
+}
+
+button:focus-visible {
+    outline: 3px solid #1e88e5;
+    outline-offset: 2px;
+}
+
+.visualmenteOculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.corpo {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+    background-color: #c8321a;
+    border-radius: 28px;
+    border-bottom: 10px solid #8f200e;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+}
+
+.barraEsquerda {
+    background-color: #d63a1f;
+    border: 2px solid #a82a12;
+    width: 300px;
+    flex-shrink: 0;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 18px;
+}
+
+.cabecalhoIcone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0 6px;
+}
+
+.iconeLed {
+    background: radial-gradient(circle at 35% 30%, #8be0ff, #1e88e5 70%);
+    border: 4px solid #fff;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+.tituloPokedex {
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Press Start 2P", monospace;
+    line-height: 1.4;
+}
+
+.selecao {
+    background-color: #8bac0f;
+    border: 10px solid #2b2b2b;
+    outline: 3px solid #1a1a1a;
+    width: 100%;
+    max-width: 260px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    color: #1f3a0f;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    font-family: "Press Start 2P", monospace;
+}
+
+.meioSelecao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.meioSelecao img {
+    width: 160px;
+    height: 160px;
+    image-rendering: pixelated;
+}
+
+.nomeTexto {
+    margin: 0;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.linhaSuperior {
+    width: 100%;
+    text-align: center;
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+.linhaSuperior p,
+.linhaInferior p {
+    margin: 0;
+}
+
+.linhaInferior {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 9px;
+}
+
+.botaoDirecional {
+    width: 44px;
+    height: 44px;
+    background-color: #2b2b2b;
+    border-radius: 6px;
+}
+
+.botoes {
+    display: flex;
+    gap: 40px;
+}
+
+.proximo,
+.anterior {
+    width: 36px;
+    height: 36px;
+    background-color: #2b2b2b;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 3px 0 #000;
+}
+
+.proximo:active,
+.anterior:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #000;
+}
+
+.meioGrid {
+    background-color: #eceff1;
+    flex: 1;
+    min-width: 0;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+    border-radius: 18px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.estatisticas {
+    background-color: #fff;
+    border-radius: 12px;
+    min-height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 14px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.estatisticas img {
+    width: 110px;
+    height: 110px;
+    padding: 8px;
+    background-color: #eef0f1;
+    border-radius: 8px;
+    image-rendering: pixelated;
+    flex-shrink: 0;
+}
+
+.linhaBusca {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.habilidades {
+    background-color: #fff;
+    border-radius: 10px;
+    flex: 0.6;
+    min-height: 44px;
+    padding: 8px 12px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.habilidades p {
+    margin: 0;
+}
+
+.pesquisa {
+    flex: 1;
+    min-height: 44px;
+}
+
+.pesquisa input {
+    width: 100%;
+    height: 100%;
+    min-height: 44px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    outline: none;
+}
+
+.pesquisa input:focus {
+    box-shadow: 0 0 0 2px #1e88e5;
+}
+
+.favoritos {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.botaoFavoritar {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 2px solid #999;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.botaoFavoritar.ativo {
+    background-color: #ffe9a6;
+    border-color: #b8860b;
+}
+
+.listaFavoritos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.cardFavorito {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cardFavorito img {
+    width: 40px;
+    height: 40px;
+    image-rendering: pixelated;
+}
+
+.filtrosTipo {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.botaoFiltro {
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: none;
+    background-color: #b9c0c4;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: transform 0.1s ease, filter 0.1s ease;
+}
+
+.botaoFiltro:hover {
+    filter: brightness(1.08);
+}
+
+.botaoFiltro.ativo {
+    outline: 3px solid #2b2b2b;
+    transform: scale(1.05);
+}
+
+.molduraLista {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    width: 100%;
+    max-height: 420px;
+    overflow-y: auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.listaPokemons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+    gap: 10px;
+}
+
+.mensagemLista {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.cardPokemon {
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cardPokemon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cardPokemon img {
+    width: 70px;
+    height: 70px;
+    image-rendering: pixelated;
+}
+
+/* ===== BARRAS DE STATUS ===== */
+.barrasStatus {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.linhaStatus {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rotuloStatus {
+    width: 46px;
+    flex-shrink: 0;
+    font-family: "Press Start 2P", monospace;
+    font-size: 8px;
+}
+
+.trilhoStatus {
+    flex: 1;
+    height: 8px;
+    background-color: #e3e3e3;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.barraStatus {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.4s ease;
+}
+
+.barraVermelha {
+    background-color: #f0583f;
+}
+
+.barraLaranja {
+    background-color: #f5a623;
+}
+
+.valorStatus {
+    width: 28px;
+    flex-shrink: 0;
+    text-align: right;
+    font-size: 12px;
+}
+
+@media (max-width: 1024px) {
+    body {
+        padding: 20px 12px;
+    }
+}
+
+@media (max-width: 800px) {
+    .corpo {
+        flex-direction: column;
+    }
+
+    .barraEsquerda {
+        width: 100%;
+    }
+
+    .meioGrid {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px 8px;
+    }
+
+    .corpo {
+        padding: 8px;
+        border-radius: 20px;
+    }
+
+    .meioGrid {
+        padding: 10px;
+    }
+
+    .estatisticas {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 14px;
+    }
+
+    .estatisticas img {
+        align-self: center;
+    }
+
+    .linhaBusca {
+        flex-direction: column;
+    }
+
+    .habilidades {
+        flex: none;
+    }
+
+    .molduraLista {
+        max-height: 360px;
+        padding: 10px;
+    }
+
+    .listaPokemons {
+        grid-template-columns: repeat(auto-fill, minmax(76px, 1fr));
+        gap: 8px;
+    }
+
+    .cardPokemon img {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
